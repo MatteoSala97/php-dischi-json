@@ -1,0 +1,18 @@
+header,
+.card{
+    background-color: #08131f;
+}
+
+body{
+    background-color: #1f2d3c;
+    position: relative;
+}
+
+#logo{
+    padding: 20px;
+    width: 150px
+}
+
+#overlay{
+    background-color: rgba(19 ,32 ,39 ,0.7);
+}

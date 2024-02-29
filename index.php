@@ -14,12 +14,26 @@
 
 
     <!-- My CSS -->
-    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 <body class="vh-100">
     <div id="app">
-        <div class="container-fluid">
+        <?php include_once __DIR__ . './header.php'?>
+        <?php include_once __DIR__ . './main.php'?>
+
+        <div 
+        v-if="isShown"
+        id="overlay" 
+        class="position-absolute top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center ">
+            <div class="card">
+                <img class="card-img-top" :src="selectedDisc.poster" :alt="selectedDisc.title"/>
+                <div class="card-body">
+                    <h4 class="card-title">{{selectedDisc.title}}</h4>
+                    <p class="card-text">{{selectedDisc.author}}</p>
+                    <p class="card-text">{{selectedDisc.year}}</p>
+                </div>
+            </div>
             
         </div>
     </div>
